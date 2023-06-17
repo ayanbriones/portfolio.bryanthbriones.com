@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import IconMenu from './IconMenu'
+import logo from '../icons/b-logo1.png'
 
 const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false)
@@ -11,7 +12,10 @@ const Navbar = () => {
       <nav className='navbar flex-col items-start md:flex-row max-w-screen-xl mx-auto'>
         <div className='flex-1'>
           <a className='btn btn-ghost normal-case text-xl text-primary'>
-            Bryanth<span className='text-secondary font-bold'>Briones</span>
+            <div className='max-w-[2rem]'>
+              <img src={logo.src} width={50} className='w-full' />
+            </div>
+            {/* Bryanth<span className='text-secondary font-bold'>Briones</span> */}
           </a>
         </div>
         <button
