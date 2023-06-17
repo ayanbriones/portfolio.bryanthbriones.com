@@ -1,20 +1,29 @@
 ---
 import { Image } from '@astrojs/image/components'
 import img from '../assets/images/me.png'
+import Title from './Title.astro'
 ---
 
-<section class='flex flex-row'>
-  <div class=''>
-    <Image src={img} width={2202} height={2616} alt='' class='max-w-sm' />
-  </div>
-  <div class='self-center'>
-    <p>Hi! I'm Bryanth.</p>
-    <p>
-      I am from the Philippines and I am passionate about technologies and
-      software development.
-    </p>
-    <p>
-      As of now, I am a freelance frontend developer with 4 years of experience.
-    </p>
+<section class='p-4'>
+  <Title title='About' id='about' class='' />
+  <div class='flex flex-row'>
+    <div class='max-w-sm'>
+      <Image src={img} width={2202} height={2616} alt='' class='w-full' />
+    </div>
+    <div class='self-center'>
+      <p>Hi! I'm Bryanth.</p>
+      <p>
+        I am from the Philippines and I am passionate about technologies and
+        software development.
+      </p>
+      <p>
+        As of now, I am a freelance frontend developer with 4 years of
+        experience.
+      </p>
+      <p>
+        This page is still a work in progress, so please do come back from time
+        to time to check out for updates.
+      </p>
+    </div>
   </div>
 </section>
