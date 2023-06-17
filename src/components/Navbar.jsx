@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { IoIosMenu } from 'react-icons/io'
+import IconMenu from './IconMenu'
 
 const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false)
@@ -18,7 +18,7 @@ const Navbar = () => {
           className='btn btn-ghost md:hidden text-3xl absolute right-4'
           onClick={handleClick}
         >
-          <IoIosMenu />
+          <IconMenu />
         </button>
         <div className={`${toggleNav ? '' : 'hidden'} md:flex md:flex-none`}>
           <ul className='menu menu-vertical md:menu-horizontal px-1'>
