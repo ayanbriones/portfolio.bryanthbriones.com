@@ -1,0 +1,46 @@
+---
+import ProjectCard from './ProjectCard.astro'
+import Title from './Title.astro'
+
+const projects = [
+  {
+    name: 'Eccho Rights',
+    description:
+      'Migrated the frontend from Laravel to Preact. Built the masonry using isotope and integrated the component to laravel. I also work with the CMS and backend using laravel.',
+    technologies: ['Larave', 'Preact', 'Vite'],
+    link: 'https://ecchorights.com/',
+    imageUrl: '/images/ecchorights.jpg',
+  },
+
+  {
+    name: 'Fallen',
+    description: 'Build the frontend using AstroJS and ReactJS',
+    technologies: ['AstroJS', 'ReactJS', 'Laravel'],
+    link: 'https://fallen.ecchorights.com/',
+    imageUrl: '/images/fallen microsite.jpg',
+  },
+  {
+    name: 'Eid Card',
+    description:
+      'Eid Greeting Card where you can download the greeting card with your name on it',
+    technologies: ['AstroJS', 'ReactJS'],
+    link: 'http://eid.saudichemical.com/',
+    imageUrl: '/images/Eid card.jpg',
+  },
+]
+---
+
+<section class='p-4'>
+  <Title title='Projects' id='projects' class='' />
+  {
+    projects.map((project) => (
+      <ProjectCard
+        name={project.name}
+        description={project.description}
+        link={project.link}
+        imageUrl={project.imageUrl}
+        technologies={project.technologies}
+      />
+    ))
+  }
+</section>

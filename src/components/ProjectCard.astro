@@ -1,0 +1,36 @@
+---
+import { Image } from '@astrojs/image/components'
+import Img1 from '../assets/images/ecchorights.jpg'
+// const { project } = Astro.props
+const { name, imageUrl, description, link, technologies } = Astro.props
+---
+
+<div
+  class='card lg:card-side bg-base-300 shadow-xl rounded-none my-8 hover:opacity-90'
+>
+  <div>
+    <Image
+      src={imageUrl}
+      width={1200}
+      aspectRatio={'16:9'}
+      format={'jpg'}
+      alt='echhorights'
+      class='max-w-lg'
+    />
+  </div>
+  <div class='card-body'>
+    <h2 class='card-title'>{name}</h2>
+    <p>{description}</p>
+    <div>
+      <p class='m-0 p-0 text-sm font-bold'>Technologies:</p>
+      <ul class='flex flex-row gap-8 list-disc text-xs'>
+        {technologies.map((technology) => <li>{technology}</li>)}
+      </ul>
+    </div>
+    <div class='card-actions justify-end'>
+      <a href={link} target='_blank'>
+        <button class='btn btn-primary'>Check this out</button>
+      </a>
+    </div>
+  </div>
+</div>

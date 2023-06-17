@@ -1,0 +1,25 @@
+---
+import { Image } from '@astrojs/image/components'
+import Img1 from '../assets/images/IMG_7741 copy.png'
+---
+
+<section class=''>
+  <div class='hero z-0 min-h-screen bg-base-300'>
+    <div
+      class='flex hero-content justify-between flex-col gap-36 items-center lg:flex-row-reverse'
+    >
+      <Image
+        src={Img1}
+        width={1701}
+        height={2673}
+        alt=''
+        class='max-w-sm shadow-2xl'
+      />
+      <div>
+        <h1 class='text-5xl font-bold'>Hi! I'm Bryanth</h1>
+        <p class='py-6'>Frontend Developer</p>
+        <button class='btn btn-primary'>Hire Me</button>
+      </div>
+    </div>
+  </div>
+</section>
