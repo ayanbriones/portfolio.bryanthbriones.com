@@ -9,15 +9,14 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        import.meta.env.PUBLIC_REACT_APP_SERVICE_ID,
-        import.meta.env.PUBLIC_REACT_APP_TEMPLATE_ID,
+        'service_djiewt2',
+        'template_o6npebu',
         form.current,
-        import.meta.env.PUBLIC_REACT_APP_PUBLIC_KEY
+        'PVa3VL3U-akcodPrs'
       )
       .then(
         (result) => {
           console.log(result.text)
-          console.log('success')
         },
         (error) => {
           console.log(error.text)
