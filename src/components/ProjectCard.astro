@@ -24,7 +24,7 @@ const { name, imageUrl, description, link, technologies } = Astro.props
     <div>
       <p class='m-0 p-0 text-sm font-bold'>Technologies:</p>
       <ul class='flex flex-row gap-8 list-disc text-xs'>
-        {technologies.map((technology) => <li>{technology}</li>)}
+        {technologies.map((technology: any) => <li>{technology}</li>)}
       </ul>
     </div>
     <div class='card-actions justify-end'>
