@@ -9,10 +9,10 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         form.current,
-        'YOUR_PUBLIC_KEY'
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -61,12 +61,13 @@ const ContactForm = () => {
           </label>
           <textarea
             className='textarea textarea-bordered h-24 focus:bg-slate-300 focus:text-black'
+            name='message'
             placeholder=''
             maxLength={300}
             minLength={3}
           ></textarea>
         </div>
-        <input type='submit' value='Send' className='btn w-full' />
+        <input type='submit' value='Send' className='btn w-full btn-primary' />
       </form>
     </div>
   )
