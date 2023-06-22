@@ -5,18 +5,18 @@ import Img1 from '../assets/images/ecchorights.jpg'
 const { name, imageUrl, description, link, technologies } = Astro.props
 ---
 
-<div
-  class='card lg:card-side bg-base-300 shadow-xl rounded-none my-8 hover:opacity-90'
->
-  <div>
-    <Image
-      src={imageUrl}
-      width={1200}
-      aspectRatio={'16:9'}
-      format={'jpg'}
-      alt='echhorights'
-      class='max-w-lg'
-    />
+<div class='card lg:card-side bg-base-300 shadow-xl rounded-none my-8'>
+  <div class='hover:scale-105 ease-in-out duration-300'>
+    <a href={link} target='_blank'>
+      <Image
+        src={imageUrl}
+        width={1200}
+        aspectRatio={'16:9'}
+        format={'jpg'}
+        alt=''
+        class='max-w-lg'
+      />
+    </a>
   </div>
   <div class='card-body'>
     <h2 class='card-title'>{name}</h2>
