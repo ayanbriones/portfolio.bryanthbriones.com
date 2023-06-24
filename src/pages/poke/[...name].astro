@@ -1,0 +1,16 @@
+---
+export async function getStaticPaths() {
+    const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150')
+    const result = await res.json()
+    const allPokemon = await result.results
+
+    const paths = allPokemon.map((pokemon: any) => ({
+        params: { name: pokemon.name },
+        props: {},
+    }))
+    return paths
+}
+const { name } = Astro.params
+---
+
+<h2>Hey it's {name?.toUpperCase()}</h2>
