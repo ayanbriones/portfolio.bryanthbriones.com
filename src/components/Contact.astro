@@ -3,7 +3,10 @@ import Title from './Title.astro'
 import ContactForm from './ContactForm.jsx'
 ---
 
-<section id='contact' class='p-4'>
+<section
+    id='contact'
+    class='p-4 w-full max-w-full min-w-full md:pt-28 md:min-w-[80vw] md:max-w-5xl md:m-auto'
+>
     <Title title='Contact' />
     <ContactForm client:load />
 </section>
