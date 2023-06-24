@@ -1,0 +1,7 @@
+---
+const pokemon = await fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+const data = await pokemon.json()
+---
+
+<p>{data.name}</p>
+<img src={data.sprites.front_default} />
