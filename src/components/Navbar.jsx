@@ -8,7 +8,7 @@ const Navbar = () => {
     setToggleNav(!toggleNav)
   }
   return (
-    <header className='w-full fixed bg-opacity-70 backdrop-blur-md bg-base-300 z-50'>
+    <header className='w-full fixed bg-opacity-70 backdrop-blur-md bg-base-200 z-50'>
       <nav className='navbar flex-col items-start md:flex-row max-w-screen-xl mx-auto'>
         <div className='flex-1'>
           <a className='btn btn-ghost normal-case text-xl text-primary'>

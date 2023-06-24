@@ -39,7 +39,7 @@ const ContactForm = () => {
           </label>
           <input
             type='text'
-            className='input input-bordered w-full focus:bg-slate-300 focus:text-black'
+            className='input input-bordered w-full focus:bg-slate-300 focus:text-black rounded-none'
             name='user_name'
             required
             maxLength={100}
@@ -51,7 +51,7 @@ const ContactForm = () => {
           </label>
           <input
             type='email'
-            className='input input-bordered w-full focus:bg-slate-300 focus:text-black'
+            className='input input-bordered w-full focus:bg-slate-300 focus:text-black rounded-none'
             name='user_email'
             required
             maxLength={100}
@@ -62,14 +62,18 @@ const ContactForm = () => {
             <span className='label-text'>Your Message</span>
           </label>
           <textarea
-            className='textarea textarea-bordered h-24 focus:bg-slate-300 focus:text-black'
+            className='textarea textarea-bordered h-24 focus:bg-slate-300 focus:text-black rounded-none'
             name='message'
             placeholder=''
             maxLength={300}
             minLength={3}
           ></textarea>
         </div>
-        <input type='submit' value='Send' className='btn w-full btn-primary' />
+        <input
+          type='submit'
+          value='Send'
+          className='btn w-full btn-primary rounded-none'
+        />
       </form>
     </div>
   )
